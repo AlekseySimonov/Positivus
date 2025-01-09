@@ -1,0 +1,19 @@
+.navbar {
+    margin-top: 60px;
+    &-nav{
+        margin-left: auto;
+        margin-right: 0 !important;
+    }
+    &-brand {
+        width: 220px;
+    }
+}
+
+.nav {
+    &-item {
+        margin-right: 40px;
+    }
+    &-item:last-child {
+        margin-right: 0px;
+    }
+}

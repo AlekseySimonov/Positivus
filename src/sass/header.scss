@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    &-info{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        &__title{
+            font-size: 60px;
+            font-weight: 500;
+            line-height: 77px;
+        }
+        &__btn{
+            @include button
+        }
+    }
+    &-sponsors{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+        width: 100%;
+    }
+    img{
+        width: 600px;
+    }
+}

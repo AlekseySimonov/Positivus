@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+$main-color: rgb(25, 26, 35);
+$main-color-2: rgb(185, 255, 102);
+$sub-color: rgb(243, 243, 243);
+
+h1{
+    font-size: 60px;
+    font-weight: 500;
+    text-align: start;
+    margin: 0!important;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: start;
+    margin: 0!important;
+}
+
+body{
+    color: $main-color !important;
+    font-family: "Space Grotesk", serif !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 28px !important;
+    text-align: left !important;
+}
+
+section{
+    margin-top: 140px;
+}
+
+@mixin button{
+    display: flex;
+    background-color: $main-color;
+    width: max-content;
+    padding-inline: 35px;
+    padding-block: 20px;
+    color:$sub-color;
+    border: none;
+    border-radius: 14px;
+}
+
+@mixin heading{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    .heading-title{
+        border-radius: 7px;
+        background: rgb(185, 255, 102);
+        font-size: 40px;
+        font-weight: 500;
+        margin: 0;
+        padding: 7px;
+    }
+    .heading-text{
+        font-size: 18px;
+        height: 46px;
+        width: 580px;
+    }
+}
+
+@mixin heading2{
+    display: flex;
+    flex-direction: column;
+        span{
+            border-radius: 7px;
+            font-size: 30px;
+            font-weight: 500;
+            margin: 0;
+            padding-inline: 7px;
+            border-radius: 7px;
+        }
+    
+    
+
+}
+
+@mixin card_style{
+    border: none;
+    background: none;
+    width: auto !important;
+    &-body{
+        padding: 50px;
+        box-sizing: border-box;
+        border-radius: 45px;
+        background: $sub-color;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./navbar";
+@import "./header";
+@import "./section_services";
+@import "./section_process"

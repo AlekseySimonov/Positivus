@@ -1,0 +1,148 @@
+@mixin card{
+    @include card_style;
+    border: none;
+    background: none;
+    width: auto !important;
+    &-body{
+        box-shadow: 0px 5px 0px 0px rgb(25, 26, 35);
+        background: $sub-color;
+        width: 600px;
+    }
+    &-body__content{
+        display: flex;
+        flex-direction: column;
+        gap: 93px;
+    }
+        .heading2-title{
+            @include heading2
+        }
+    img{
+        width: 210px;
+    }
+    
+}
+
+@mixin link-icon{
+    .link-icon{
+        &__arrow{
+            position: relative;
+            width: 20px;
+            height: 0;
+            left: 12px;
+            top: 26px;
+            transform: rotate(-30.00deg);
+            box-sizing: border-box;
+            border: 3px solid rgb(185, 255, 102);
+        }
+        &__ellipse{
+            position: relative;
+            background: rgb(25, 26, 35);
+            width: 41px;
+            height: 41px;
+        }
+    }
+}
+
+.services{
+    &-heading{
+        @include heading
+    }
+    .row{
+        margin-top: 80px;
+        width: inherit;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        row-gap: 40px;
+    }
+    .col-sm-6{
+        padding: 0;
+        width: max-content
+    }
+    .card{
+        @include card;
+    }
+    .col-sm-6:nth-of-type(3n+1) .card-body {
+        background: $sub-color;
+        span{
+            background: $main-color-2;
+        }
+    }
+
+    .col-sm-6:nth-of-type(3n+2) .card-body {
+        background: $main-color-2; 
+        span{
+            background: $sub-color;
+        }
+    }
+
+    .col-sm-6:nth-of-type(3n+3) .card-body {
+        background: $main-color;
+        span{
+            background: $sub-color;
+        }
+        .btn{
+            color: $sub-color;
+        }
+            .circle{
+                background: $sub-color;
+            }
+                .fa-solid{
+                    color: $main-color;
+                }
+    }
+
+    .btn{
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: none;
+        border: none;
+        .circle{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            align-items: center;
+            height: 41px;
+            width: 41px;
+            background-color: $main-color;
+            border-radius: 50%;
+        }
+        .fa-arrow-right{
+            top: 50%;
+            font-size: 20px;
+            color: $main-color-2;
+            transform: rotate(-30.00deg);
+        }
+    }
+}
+
+.CTA-card{
+    .card{
+        @include card_style;
+        margin-top: 124px;
+    }
+    .card-body{
+        position: relative;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+    }
+        .card-body__info{
+            text-align: start;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 26px;
+        }
+    img{
+        position: absolute;
+        top: -7%;
+        left: 60%;
+        width: 360px;
+    }
+    
+}
